@@ -1,2 +1,2 @@
-# dio - front-end_animacoes
+# Animações em CSS
 Pequenas animações utilizando css.
