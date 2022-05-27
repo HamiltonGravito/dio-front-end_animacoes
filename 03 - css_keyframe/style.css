@@ -5,12 +5,13 @@ body {
     padding: 0;
     color: white;
     font-family: 'Long Cang', cursive, sans-serif;
+    background-image: url("./fundoGradiente.jpeg");
 }
 
 .wrapper {
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(-45deg, #ac80ff, #6151f5, #1622ea, #660cbf);
+    background: linear-gradient(-45deg, rgba(172, 128, 255, 0.5), rgba(97, 81, 245, 0.5), rgba(22, 34, 234, 0.5), rgba(102, 12, 191, 0.5));
     background-size: 400% 400%;
     display: flex;
     flex-direction: column;
