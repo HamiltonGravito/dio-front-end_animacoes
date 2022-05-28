@@ -16,7 +16,7 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="home">
+        <div class="home" id="home">
             <header class="header-wrapper">
                 <div class="header">
                     <div class="checkbox-container">
@@ -31,13 +31,10 @@
                             <nav class="menu-itens">
                                 <ul>
                                     <li>
-                                        <a href="#">Home</a>
+                                        <a href="#home" id="home_id" onclick="fecharMenu()">Home</a>
                                     </li>
                                     <li>
-                                        <a href="#">Sobre</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Projetos</a>
+                                        <a href="#sobre" id="sobre_id" onclick="fecharMenu()">Sobre</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -49,53 +46,64 @@
                     <h3>Full Stack Developer</h3>
                 </div>
                 <div class="social-media">
-                    <a href="#">Linkedin</a>
-                    <a href="#">Github</a>
+                    <a href="https://www.linkedin.com/in/hamilton-gravito/" target="_blank">Linkedin</a>
+                    <a href="https://github.com/HamiltonGravito" target="_blank">Github</a>
                 </div>
             </header>
         </div>
-        
+    <div id="sobre">
         <main class="container">
             <div class="card-container">
                 <div class="card-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At eum sunt alias quaerat sit ea soluta, repellendus deleniti distinctio maiores. Iste aperiam laborum dolorum? Nobis quasi suscipit labore laudantium quis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dignissimos, incidunt dolorem debitis itaque reprehenderit, asperiores facere quam exercitationem architecto dolorum, voluptatibus nesciunt doloremque voluptatum ipsa nobis qui quis! Consectetur.
+                    <p>
+                        Hamilton Gravito, 36 anos, casado e com um filho, formado em bacharel de Sistemas de Informação em julho de 2017 e desde então apaixonado mais e mais por tecnologia.
+                        Por vários motivos ainda sem conseguir uma oportunidade na área de desevolvimento de software, mas, sem deixar de acreditar que "vai dá certo!".
+                        Trabalho em instituições públicas a mais de 17 anos como servidor público, e sou grato a Deus por ter conseguido ser aprovado e nomeado em dois concursos públicos.
+                        Porém, a medida que vamos amadurecendo, estabilidade passa a não importar tanto quanto a vontade de fazer algo cada vez mais gratificante, diferente, novo.
+                        Crescer, evoluir é a meta. Acredito ter qualidades como ser calmo, equilibrado, focado, honesto, responsavél, bem humorado, além de ser um bom ouvinte e observador.
+                        Mas, como nem tudo é uma mar de flores há caracteristicas que ainda preciso melhorar muito como orgulho (acho bastante dificuldade em pedir ou aceitar ajuda de outros),
+                        a procrastinação (tarefas menos prazerosas são mais dificieis de serem concluídas) e às vezes tenho dificuldade em ser pontual, mas, só às vezes.
+                        Então, essa é uma parte de mim...
+                    </p>
                 </div>
+                <div class="card">
+                    <div class="card-wrapper">
+                        <h2>Esse sou Eu</h2>
+                        <p>Um pouco sobre mim</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
                 <div class="card">
                     <div class="card-wrapper">
                         <h2>Github</h2>
                         <p>Veja meus projetos</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="card-container">
-                <div class="card">
-                    <div class="card-wrapper">
-                        <h2>Linkedin</h2>
-                        <p>Acompanhe minha carreira!</p>
-                    </div>
-                </div>
                 <div class="card-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At eum sunt alias quaerat sit ea soluta, repellendus deleniti distinctio maiores. Iste aperiam laborum dolorum? Nobis quasi suscipit labore laudantium quis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dignissimos, incidunt dolorem debitis itaque reprehenderit, asperiores facere quam exercitationem architecto dolorum, voluptatibus nesciunt doloremque voluptatum ipsa nobis qui quis! Consectetur.
+                    <p> Habilidades em JavaScript, HTML, CSS, Java (spring-boot), Angular, Arduíno, SQL e outros. </p>
                 </div>
             </div>
 
             <div class="card-container">
                 <div class="card-text">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. At eum sunt alias quaerat sit ea soluta, repellendus deleniti distinctio maiores. Iste aperiam laborum dolorum? Nobis quasi suscipit labore laudantium quis.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi dignissimos, incidunt dolorem debitis itaque reprehenderit, asperiores facere quam exercitationem architecto dolorum, voluptatibus nesciunt doloremque voluptatum ipsa nobis qui quis! Consectetur.
+                    <p>"Sê forte e corajoso; não temas, nem te espantes, porque o SENHOR, teu Deus, é contigo por onde quer que andares. <i>Js 1,9</i>".</br>
+                    “Sempre entregue mais do que o esperado. <i>Larry Page</i>”</br>
+                    "Loucura é querer resultados diferentes fazendo tudo exatamente igual! <i>Albert Einstein</i>"</br>
+                    "Escolhas difíceis requerem determinação forte. <i>Thanos</i>"</br>
+                    "Transforme ideias em soluções extraordinárias. <i>TQI</i>"
+                </p>
                 </div>
                 <div class="card">
                     <div class="card-wrapper">
-                        <h2>Instagram</h2>
-                        <p>Meu dia a dia ;)</p>
+                        <h2>Inspirações</h2>
+                        <p>"O que fazemos em vida,</br> ecoa na eternidade."</p>
                     </div>
                 </div>
             </div>
         </main>
-
+    </div>
         <footer class="footer">
             By Hamilton Gravito
         </footer>
@@ -112,6 +120,12 @@
                     document.body.scroll = "yes"; // IE
                 }
             });
+
+            function fecharMenu(){
+                check.checked = false;
+                document.documentElement.style.overflow = 'auto';
+                document.body.scroll = "yes"; // IE
+            }
         </script>
     </body>
 </html>
